@@ -4,4 +4,4 @@ baseurl: /
 markdown: kramdown
 paginate: 10
 permalink: pretty
-exclude: [ haml, scss, Gemfile, bin ]
+exclude: [ Gemfile ]
