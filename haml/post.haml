@@ -1,0 +1,113 @@
+!!! 5
+
+%html{ :lang => "en" }
+  %head
+    %meta{ :charset =>"utf-8" }
+    %meta{ :"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1" }
+
+    %title Bork
+
+    %link{ :rel => "stylesheet", :href => "css/base.css" }
+    %link{ :rel => "stylesheet", :href => "css/skeleton.css" }
+    %link{ :rel => "stylesheet", :href => "css/layout.css" }
+
+    / host setting!
+    %link{ :rel => "stylesheet", :href => "http://f.fontdeck.com/s/css/uH5+KWQnibDTJRYggGJ9XZLTAgw/ironforge.local/20103.css" }
+    %script{ :src => "http://use.typekit.com/lvn0xvt.js" }
+    :javascript
+      try{Typekit.load();}catch(e){}
+
+    %script{ :src => "http://localhost:35729/livereload.js?snipver=1" }
+
+  %body
+
+    .container
+      .four.columns
+        #sidebar-wrapper
+          %header#site-header
+            %h1
+              %a{ :href => "#" } Carlo Zottmann
+
+            %p
+              Bavaria-based freelance web dev at day, beloved local vigilante
+              "Bavman" at night.
+
+            /
+              %p
+                From The People Who Brought You Breathable Atmosphere And Porn.
+
+              %p
+                I Didn't Ask For This.
+
+              %p
+                Entirely Unsuspicious Human Person.
+
+          #links
+            %ul
+              %li
+                %a{ :href => "/" } carlo.zottmann.org
+              %li
+                %a{ :href => "http://twitter.com/municode" } @municode
+              %li
+                %a{ :href => "http://municode.de" } municode.de
+              %li
+                %a{ :href => "mailto:carlo@zottmann.org" } Mail
+              %li
+                %a{ :href => "http://feedburner.com/carlo" } RSS
+              %li.imprint
+                %a{ :href => "/impressum" } Impressum / Imprint
+
+        \&nbsp;
+
+      .twelve.columns.post-column
+        %article
+          %header
+            %h2
+              %a{ :href => "#" } Post-It #27
+            %h3.subheadline
+              Dev HTTP Client, Calepin closing, Facebook dick move #2754, shoelace knots, dubstep agriculture.
+            %time{ :datetime => "2009-11-13T20:00Z" } — Posted a while ago.
+
+
+
+          %p
+            %strong Bloody useful.
+            %a{:href => "https://chrome.google.com/webstore/detail/aejoelaoggembcahagimdiliamlcdmfm"} Dev HTTP Client
+            is a Google Chrome extension to
+            %em "[e]asily construct custom HTTP requests, save them permanently, take advantage of variables and contexts."
+            Comes with lots of neat features such as response syntax highlighting (HTML/XML/JSON) and image previews.
+          %p
+            %strong Calepin is closing shop.
+            The blogging service I use for this here blog is called
+            %a{:href => "http://calepin.co/"} Calepin,
+            and I like it a lot (as
+            %a{:href => "http://carlo.zottmann.org/2012/01/20/the-big-blog-move-of-2012/"} mentioned before
+            ).
+            Unfortunately, Jökull can no longer maintain it and so decided
+            %a{:href => "http://twitter.com/calepinapp/status/192335906479415296"} to close shop in June.
+            He
+            %a{:href => "http://github.com/jokull/calepin"} open-sourced the project,
+            tho.  If anyone wants to pick it up…
+          %p
+            Being no stranger to the blogging game, I know all of my options, but I gotta say, Calepin's concept (single files in Dropbox + push-button publishing via the website) really appealed to me more than the everything-in-Github-and-publish-via-Terminal way.  I'd switch to Calepin-contender
+            %a{:href => "http://scriptogr.am/"} Scriptogram
+            in an instant if they would allow for more flexibility in their blogs' URL paths.
+          %p
+            %strong Better not use the word "book" there, pal.
+            In the name of your new project, and if you're a Facebook user, that is.  As
+            %a{:href => "http://j.mp/I0Skpr"} Ars reported a month ago,
+            if you're a FB user, you've agreed on a legally binding contract that prevents you from using several words in your own, non-FB projects.  Nice to see they're staying in character.
+          %p
+            %strong Fukken shoelaces, how do they work?
+            There's more than one way to tie a knot.  I own some shoelaces that come undone rather easily (due to their teflon-like surface material), but tying them using the
+            %a{:href => "http://www.fieggen.com/shoelace/ianknot.htm"} Ian Knot
+            helps.
+          %p
+            %strong Hardcore l33t farming.
+            Today's extreme e-sports video (spoof) is delightful.
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube-nocookie.com/embed/gEJHrmliVQw", :width => "560"}
+
+
+          %p.article-end
+            \~ FIN ~

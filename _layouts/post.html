@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang || 'en' }}">
+  {% include head.html %}
+
+  <body>
+    <div class="container">
+      <div class="four columns">
+        <div id="sidebar-wrapper">
+
+          {% include sidebar-header.html %}
+          {% include sidebar-links.html %}
+
+        </div>
+        &nbsp;
+      </div>
+
+      <div class="twelve columns post-column">
+        <article>
+          <header>
+            <h2>
+              <a href="{{ page.url }}">{{ page.title }}</a>
+            </h2>
+            {% if page.abstract %}
+              <h3 class="subheadline">
+                {{ page.abstract }}
+              </h3>
+            {% endif %}
+            <time datetime="{{ page.date }}">— {{ page.date | fuzzy_date }}</time>
+          </header>
+
+          {{ content }}
+
+          <p class="article-end">
+            ~ FIN ~
+          </p>
+        </article>
+      </div>
+    </div>
+
+    {% include vcard.html %}
+  </body>
+</html>

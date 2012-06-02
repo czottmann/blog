@@ -1,0 +1,7 @@
+auto: true
+server: true
+baseurl: /
+markdown: kramdown
+paginate: 10
+permalink: pretty
+exclude: [ haml, sass, Gemfile, bin ]

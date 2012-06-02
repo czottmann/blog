@@ -1,0 +1,115 @@
+!!! 5
+
+%html{ :lang => "en" }
+  %head
+    %meta{ :charset =>"utf-8" }
+    %meta{ :"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1" }
+
+    %title Bork
+
+    %link{ :rel => "stylesheet", :href => "css/base.css" }
+    %link{ :rel => "stylesheet", :href => "css/skeleton.css" }
+    %link{ :rel => "stylesheet", :href => "css/layout.css" }
+
+    / host setting!
+    %link{ :rel => "stylesheet", :href => "http://f.fontdeck.com/s/css/uH5+KWQnibDTJRYggGJ9XZLTAgw/ironforge.local/20103.css" }
+    %script{ :src => "http://use.typekit.com/lvn0xvt.js" }
+    :javascript
+      try{Typekit.load();}catch(e){}
+
+    %script{ :src => "http://localhost:35729/livereload.js?snipver=1" }
+
+  %body
+
+    .container
+      .four.columns
+        #sidebar-wrapper
+          %header#site-header
+            %h1
+              %a{ :href => "#" } Carlo Zottmann
+
+            %p
+              Bavaria-based freelance web dev at day, beloved local vigilante
+              "Bavman" at night.
+
+            /
+              %p
+                From The People Who Brought You Breathable Atmosphere And Porn.
+
+              %p
+                I Didn't Ask For This.
+
+              %p
+                Entirely Unsuspicious Human Person.
+
+          #links
+            %ul
+              %li
+                %a{ :href => "/" } carlo.zottmann.org
+              %li
+                %a{ :href => "http://twitter.com/municode" } @municode
+              %li
+                %a{ :href => "http://municode.de" } municode.de
+              %li
+                %a{ :href => "mailto:carlo@zottmann.org" } Mail
+              %li
+                %a{ :href => "http://feedburner.com/carlo" } RSS
+              %li.imprint
+                %a{ :href => "/impressum" } Impressum / Imprint
+
+          #index-hint
+            Take your pick. &rarr;
+
+        \&nbsp;
+
+      .twelve.columns.list-column
+        %section
+          %ul#post-list
+            %li
+              %a{ :href => "#" } Post-It #27
+              %div.subheadline
+                Dev HTTP Client, Calepin closing, Facebook dick move #2754, shoelace knots, dubstep agriculture.
+              %time{ :datetime => "2009-11-13T20:00Z" } — Posted a while ago.
+
+            %li
+              %a{ :href => "#" } Hazel Quick Tip: Automatically extract the actual installer from Adobe's Flash Player installer
+              %div.subheadline
+                Yo dawg I herd you like installers so we put an installer inside your installer so you can install while you install.
+              %time{ :datetime => "2009-11-13T20:00Z" } — Posted a while ago.
+
+            %li
+              %a{ :href => "#" } Post-It #28
+              %div.subheadline
+                localtunnel, Baldur's Gate, Sparrow for iPhone, Russian space program, Dow Jones, RUIN. In that order.
+              %time{ :datetime => "2009-11-13T20:00Z" } — Posted a while ago.
+
+            %li
+              %a{ :href => "#" } Post-It #27
+              %div.subheadline
+                Dev HTTP Client, Calepin closing, Facebook dick move #2754, shoelace knots, dubstep agriculture.
+              %time{ :datetime => "2009-11-13T20:00Z" } — Posted a while ago.
+
+            %li
+              %a{ :href => "#" } Mini review: "Workout Hero" for iPhone
+              %div.subheadline
+                I'm not strong enough to stomach this.
+              %time{ :datetime => "2009-11-13T20:00Z" } — Posted a while ago.
+
+            %li
+              %a{ :href => "#" } Post-It #27
+              %div.subheadline
+                Dev HTTP Client, Calepin closing, Facebook dick move #2754, shoelace knots, dubstep agriculture.
+              %time{ :datetime => "2009-11-13T20:00Z" } — Posted a while ago.
+
+            %li
+              %a{ :href => "#" } Post-It #27
+              %div.subheadline
+                Dev HTTP Client, Calepin closing, Facebook dick move #2754, shoelace knots, dubstep agriculture.
+              %time{ :datetime => "2009-11-13T20:00Z" } — Posted a while ago.
+
+          %ul#pagination
+            %li.past
+              %a{ :href => "#" } &larr; The past
+            %li.future
+              %a{ :href => "#" } The future &rarr;

@@ -1,0 +1,402 @@
+/*
+* Skeleton V1.1
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 8/17/2011
+*/
+
+/* Table of Content
+==================================================
+  #Site Styles
+  #Page Styles
+  #Media Queries */
+
+
+/* #Site Styles
+================================================== */
+
+@mixin ligatures {
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  -webkit-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+  font-variant-ligatures: common-ligatures additionalligatures;
+}
+
+@mixin lemonde-courrier-regular {
+  // Le Monde Courrier STD Regular
+  @include ligatures;
+  font-family: "lemonde-courrier-n4", "lemonde-courrier", serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin lemonde-courrier-semibold {
+  // Le Monde Courrier STD Semibold
+  @include ligatures;
+  font-family: "lemonde-courrier-n6", "lemonde-courrier", serif;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin proxima-nova {
+  // Proxima Nova Regular
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin monospace {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace !important;
+}
+
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+  -moz-box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+
+
+body {
+  @include proxima-nova;
+  color: #555;
+  font-size: 16px;
+  line-height: 160%;
+  text-rendering: optimizeLegibility;
+  text-shadow: 0px 0px 1px rgba( 128, 128, 128, 0.01 );
+}
+
+blockquote, p, li {
+  line-height: inherit;
+}
+
+code, pre {
+  @include border-radius(3px);
+  @include monospace;
+  border: 1px solid #dedede;
+  color: #333;
+  display: inline-block;
+  font-size: 14px !important;
+  padding: 0 3px 2px;
+  margin: -1px 0;
+}
+
+code {
+  background-color: #f8f8ff;
+  color: #D14;
+  padding: 0 4px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+
+  &:visited {
+    color: #000;
+  }
+
+  &:hover,
+  &:active {
+    color: #6666FF;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include lemonde-courrier-semibold;
+
+  a {
+    border-bottom: none;
+  }
+}
+
+strong, b {
+  color: #000;
+  font-weight: normal;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.75 );
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect( 0 0 0 0 );
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#sidebar-wrapper {
+  border-right: 1px dotted #efefef;
+  height: 100%;
+  position: fixed;
+  width: inherit;
+
+  #site-header,
+  #links,
+  #index-hint {
+    color: #aaa !important;
+    padding: 0 25px 0 10px;
+    position: absolute;
+    z-index: 100;
+  }
+
+  #site-header {
+    top: 62px;
+
+    a {
+      border-bottom: none;
+    }
+
+    h1,
+    p {
+      line-height: 1.2;
+      margin: 0 0 0.75em 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  #links {
+    bottom: 50px;
+    margin-bottom: 0;
+
+    .imprint {
+      font-size: 11px;
+      margin-bottom: 0;
+
+      a {
+        color: #aaa;
+      }
+    }
+  }
+
+  #index-hint {
+    top: 45%;
+  }
+}
+
+
+
+
+
+/* #Page Styles
+================================================== */
+
+// POST PAGE
+.post-column {
+  article {
+    margin: 50px 2.5% 77px 2.5%;
+
+    h1, h2, h3, h4, h5, h6 {
+      text-shadow: 0px 1px 2px #bbb;
+    }
+
+    header {
+      h3.subheadline {
+        @include lemonde-courrier-regular;
+        color: #888;
+        font-size: 20px;
+        line-height: 140%;
+        text-shadow: none;
+      }
+    }
+
+    time {
+      color: #aaa;
+      display: block;
+      padding-bottom: 40px;
+      text-transform: uppercase;
+    }
+
+    img,
+    iframe {
+      border-bottom: 2px solid #eee;
+      max-width: 100%;
+    }
+
+    sup {
+      a {
+        background-color: #ddf;
+        border-bottom: none;
+        border-radius: 9px;
+        color: black !important;
+        font-size: 11px;
+        margin-left: 2px;
+        padding: 1px 5px 2px;
+        text-shadow: 1px 1px 3px #fff;
+        vertical-align: top;
+      }
+    }
+
+    ul {
+      list-style: disc outside;
+      margin-left: 30px;
+    }
+
+    .footnotes {
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+
+      a[rel='reference'] {
+        margin-left: 5px;
+      }
+    }
+
+    .highlight {
+      @include border-radius(3px);
+      background-color: rgba( 255, 204, 51, 0.4 );
+      padding: 0 2px 2px 2px;
+    }
+
+    .article-end {
+      @include lemonde-courrier-semibold;
+      color: #ddd;
+      font-size: 32px;
+      font-weight: bold;
+      padding: 75px 0 0 0;
+      text-align: center;
+    }
+  }
+}
+
+
+// POST PAGE
+.list-column {
+  section {
+    margin: 57px 2.5% 60px 2.5%;
+
+    ul#post-list {
+      li {
+        @include lemonde-courrier-regular;
+        font-size: 24px;
+        line-height: 140%;
+        margin-bottom: 25px;
+
+        .subheadline {
+          color: #888;
+          font-size: 16px;
+          line-height: 140%;
+          text-shadow: none;
+        }
+      }
+
+      time {
+        @include proxima-nova;
+        color: #aaa;
+        display: block;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+    }
+
+    ul#pagination {
+      li {
+        display: inline-block;
+        width: 45%;
+
+        &.future {
+          text-align: right;
+        }
+
+        &.past {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+
+
+/* #Media Queries
+================================================== */
+
+  /* Smaller than standard 960 (devices and browsers) */
+  @media only screen and (max-width: 1024px) {
+  }
+
+  /* Smaller than standard 960 (devices and browsers) */
+  @media only screen and (max-width: 959px) {
+  }
+
+  /* Tablet Portrait size to standard 960 (devices and browsers) */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    #sidebar-wrapper {
+      #site-header {
+        top: 65px;
+
+        h1 {
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+
+  /* All Mobile Sizes (devices and browser) */
+  @media only screen and (max-width: 767px) {
+    #sidebar-wrapper {
+      border-right: none;
+      padding: 10px 0 0 0;
+      position: static;
+
+      #site-header,
+      #links {
+        padding: 0;
+        position: static;
+      }
+
+      #site-header {
+        h1 {
+          font-size: 40px;
+          margin: 10px 0;
+        }
+      }
+
+      #links {
+        ul li {
+          display: inline-block;
+          margin-right: 1em;
+        }
+      }
+
+      #index-hint {
+        display: none;
+      }
+    }
+
+    article {
+      padding: 0;
+      width: inherit;
+    }
+  }
+
+  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+  @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+  @media only screen and (max-width: 479px) {}
+
