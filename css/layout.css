@@ -136,7 +136,8 @@ strong, b {
     font-size: 20px;
     line-height: 140%;
     text-shadow: none; }
-  .post-column article time {
+  .post-column article time,
+  .post-column article .no-time {
     color: #aaa;
     display: block;
     padding-bottom: 40px;

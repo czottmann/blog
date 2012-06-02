@@ -25,7 +25,11 @@
                 {{ page.abstract }}
               </h3>
             {% endif %}
-            <time datetime="{{ page.date }}">— {{ page.date | fuzzy_date }}</time>
+            {% if page.date %}
+              <time datetime="{{ page.date }}">— {{ page.date | fuzzy_date }}</time>
+            {% else %}
+              <div class="no-time"></div>
+            {% endif %}
           </header>
 
           {{ content }}

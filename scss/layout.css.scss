@@ -220,7 +220,8 @@ strong, b {
       }
     }
 
-    time {
+    time,
+    .no-time {
       color: #aaa;
       display: block;
       padding-bottom: 40px;
