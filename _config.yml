@@ -1,7 +1,8 @@
-auto: true
-server: true
+# auto: true
+# server: true
 baseurl: /
 markdown: kramdown
 paginate: 10
 permalink: pretty
-exclude: [ Gemfile ]
+exclude: [ Gemfile, Rakefile.rb ]
+destination: ../jekyll-site-heroku/public
