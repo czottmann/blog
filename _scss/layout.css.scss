@@ -1,21 +1,20 @@
-/*
-* Skeleton V1.1
-* Copyright 2011, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 8/17/2011
-*/
+// Skeleton V1.1
+// Copyright 2011, Dave Gamache
+// www.getskeleton.com
+// Free to use under the MIT license.
+// http://www.opensource.org/licenses/mit-license.php
+// 8/17/2011
+//
+//
+// Table of Content
+// ==================================================
+//   #Site Styles
+//   #Page Styles
+//   #Media Queries
 
-/* Table of Content
-==================================================
-  #Site Styles
-  #Page Styles
-  #Media Queries */
 
-
-/* #Site Styles
-================================================== */
+// #Site Styles
+// ==================================================
 
 @mixin ligatures {
   -moz-font-feature-settings: "liga=1, dlig=1";
@@ -198,8 +197,8 @@ strong, b {
 
 
 
-/* #Page Styles
-================================================== */
+// #Page Styles
+// ==================================================
 
 // POST PAGE
 .post-column {
@@ -328,8 +327,8 @@ strong, b {
 
 
 
-/* #Media Queries
-================================================== */
+// #Media Queries
+// ==================================================
 
   /* Smaller than standard 960 (devices and browsers) */
   @media only screen and (max-width: 1024px) {
