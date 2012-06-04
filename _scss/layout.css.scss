@@ -374,12 +374,18 @@ strong, b {
           font-size: 40px;
           margin: 10px 0;
         }
+
+        #side-header-subline {
+          display: none;
+        }
       }
 
       #links {
+        text-align: center;
+
         ul li {
           display: inline-block;
-          margin-right: 1em;
+          margin: 0 10px 0 0;
         }
       }
 
@@ -388,9 +394,18 @@ strong, b {
       }
     }
 
-    article {
-      padding: 0;
-      width: inherit;
+    .post-column {
+      article {
+        margin: 50px 0 77px 0;
+        padding: 0;
+        width: inherit;
+      }
+    }
+
+    .list-column {
+      section {
+        margin: 25px 0 60px 0;
+      }
     }
   }
 
