@@ -6,3 +6,4 @@ paginate: 10
 permalink: pretty
 exclude: [ Gemfile, Rakefile.rb ]
 destination: ../jekyll-site-heroku/public
+future: true
