@@ -35,6 +35,13 @@
           <section class="entry-content">
             {{ content }}
 
+            {% if page.tags %}
+              <p class="tags">
+                This post was filed under
+                {{ page.tags | tag_links }}.
+              </p>
+            {% endif %}
+
             <p class="article-end">
               ~ FIN ~
             </p>
