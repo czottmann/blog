@@ -15,34 +15,37 @@
       </div>
 
       <div class="twelve columns post-column">
-        <article>
+        <article class="instapaper_body hentry">
           <header>
-            <h2>
+            <h2 class="entry-title">
               <a href="{{ page.url }}">{{ page.title }}</a>
             </h2>
             {% if page.abstract %}
-              <h3 class="subheadline">
+              <h3 class="subheadline entry-summary">
                 {{ page.abstract }}
               </h3>
             {% endif %}
             {% if page.date %}
-              <time datetime="{{ page.date }}">— {{ page.date | fuzzy_date }}</time>
+              <time datetime="{{ page.date }}" class="updated" pubdate>— {{ page.date | fuzzy_date }}</time>
             {% else %}
               <div class="no-time"></div>
             {% endif %}
           </header>
 
-          {{ content }}
+          <section class="entry-content">
+            {{ content }}
 
-          <p class="article-end">
-            ~ FIN ~
-          </p>
+            <p class="article-end">
+              ~ FIN ~
+            </p>
 
-          {% if page.lang == "de" %}
-            {% include vcard-de.html %}
-          {% else %}
-            {% include vcard-en.html %}
-          {% endif %}
+            {% if page.lang == "de" %}
+              {% include vcard-de.html %}
+            {% else %}
+              {% include vcard-en.html %}
+            {% endif %}
+          </section>
+
         </article>
       </div>
     </div>
