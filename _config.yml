@@ -4,6 +4,6 @@ baseurl: /
 markdown: kramdown
 paginate: 10
 permalink: pretty
-exclude: [ Gemfile, Rakefile.rb ]
+exclude: [ Gemfile, Gemfile.lock, Rakefile.rb ]
 destination: ../jekyll-site-heroku/public
 future: true
