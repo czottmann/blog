@@ -404,8 +404,12 @@ strong, b {
         }
       }
 
-      #index-hint .pick{
-        display: none;
+      #index-hint {
+        position: static;
+
+        .pick {
+          display: none;
+        }
       }
     }
 
