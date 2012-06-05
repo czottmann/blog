@@ -12,7 +12,7 @@ layout: index
         <div id="sidebar-wrapper">
 
           {% include sidebar-header.html %}
-          {% include vcard.html %}
+          {% include vcard-en.html %}
           {% include sidebar-links.html %}
 
           <div id="index-hint">
@@ -50,7 +50,11 @@ layout: index
             {% endif %}
             {% if paginator.previous_page %}
               <li class="future">
-                <a href="{{ site.baseurl }}/page{{ paginator.previous_page }}/">To the future &rarr;</a>
+                {% if paginator.previous_page == 1 %}
+                  <a href="{{ site.baseurl }}">To the future &rarr;</a>
+                {% else %}
+                  <a href="{{ site.baseurl }}page{{ paginator.previous_page }}/">To the future &rarr;</a>
+                {% endif %}
               </li>
             {% endif %}
           </ul>

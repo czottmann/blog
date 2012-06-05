@@ -38,8 +38,11 @@
             ~ FIN ~
           </p>
 
-          {% include vcard.html %}
-
+          {% if page.lang == "de" %}
+            {% include vcard-de.html %}
+          {% else %}
+            {% include vcard-en.html %}
+          {% endif %}
         </article>
       </div>
     </div>
