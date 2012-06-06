@@ -1,18 +1,14 @@
 ---
 title: "Assorted MacRuby Snippets"
 date: 2010-01-17
-slug: 2010/01/17/assorted-macruby-snippets
+layout: post
 tags:
+- macruby
 - applescript
 - code
-- macruby
-- ruby
-- snippets
+- mac
 - xml
 - xpath
-- apple
-- osx
-layout: post
 ---
 
 
@@ -23,17 +19,15 @@ special, but taking notes is usually a good idea, so there.
 
 For example, app name and version:
 
-
-info = NSBundle.mainBundle.infoDictionary
-info.objectForKey("CFBundleName")
-info.objectForKey("CFBundleVersion")
+    info = NSBundle.mainBundle.infoDictionary
+    info.objectForKey("CFBundleName")
+    info.objectForKey("CFBundleVersion")
 
 
 ### Open an URL in the default browser:
 
-
-url = NSURL.URLWithString("http://municode.de/")
-NSWorkspace.sharedWorkspace.openURL(url)
+    url = NSURL.URLWithString("http://municode.de/")
+    NSWorkspace.sharedWorkspace.openURL(url)
 
 
 ### Run an AppleScript
@@ -43,27 +37,24 @@ some time by using the higher-level functionality AS offers instead of writing
 a huge block of MacRuby. (For example, to eject a FS volume.) Here's how you
 do it (the AS is deliberately simple):
 
-
-script = "display dialog (\"omg\")"
-pnt = Pointer.new_with_type("@")
-as = NSAppleScript.alloc.initWithSource(script)
-as.executeAndReturnError(pnt)
-
+    script = "display dialog (\"omg\")"
+    pnt = Pointer.new_with_type("@")
+    as = NSAppleScript.alloc.initWithSource(script)
+    as.executeAndReturnError(pnt)
 
 More info at [developer.apple.com][1].
+
 
 ### Delete nodes/tags from an XML document
 
 Let's say you have a variable `doc` which represents a `NSXMLDocument`, and
 you want to remove all `em` and `cite` tags:
 
-
-error = Pointer.new_with_type("@")
-selectors = [ "//em", "//cite" ].join("|")
-doc.nodesForXPath( selectors, error: error ).each do |n|
-n.detach
-end
-
+    error = Pointer.new_with_type("@")
+    selectors = [ "//em", "//cite" ].join("|")
+    doc.nodesForXPath( selectors, error: error ).each do |n|
+      n.detach
+    end
 
 More notes might follow at a later date. :)
 
