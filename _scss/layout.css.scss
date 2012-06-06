@@ -79,20 +79,22 @@ blockquote, p, li {
   line-height: inherit;
 }
 
-code, pre {
-  @include border-radius(3px);
+pre {
   @include monospace;
-  border: 1px solid #dedede;
   color: #333;
-  display: inline-block;
-  font-size: 14px !important;
+  margin: 0 0 20px 0;
   padding: 0 3px 2px;
-  margin: -1px 0;
 }
 
 code {
+  @include border-radius(3px);
+  @include monospace;
   background-color: #f8f8ff;
+  border: 1px solid #dedede;
   color: #D14;
+  display: inline-block;
+  font-size: 85% !important;
+  margin: -1px 2px -1px 4px;
   padding: 0 4px;
 }
 
