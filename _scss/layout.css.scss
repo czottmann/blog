@@ -141,6 +141,7 @@ strong, b {
 #sidebar-wrapper {
   border-right: 1px dotted #efefef;
   height: 100%;
+  min-height: 640px;
   position: fixed;
   width: inherit;
 
@@ -191,7 +192,7 @@ strong, b {
   }
 
   #index-hint {
-    top: 40%;
+    top: 38%;
   }
 }
 
