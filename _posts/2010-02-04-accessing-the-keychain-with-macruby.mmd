@@ -31,6 +31,7 @@ clean, free and has a liberal license (MIT license, if I'm not mistaken).
 
 **Disclaimer: I'm not a Obj-C person, and what you're about to read is what works for me. I've tinkered until everything was moving in the right direction. There might be better ways (I'm pretty sure there are), and if what I've done here is bollocks, I'd be delighted if you would share your knowledge with me. :)** Also, I'd enjoy a comment with your thoughts about this here article. Any opinion will do. Just curious is all.
 
+
 ### Step 1: Build the wrapper, `EMKeychain.dylib`
 
 First, we'll have to make EMKeychain into a dynamic library. Download it from
@@ -62,9 +63,7 @@ Frameworks" folder in the tree and selecting _Add Existing Frameworks…_:
 Following the related [MacRuby tutorial][11]'s advice, add a constructor to
 the end of `EMKeychain.m`:
 
-
-void Init_EMKeychain(void) { }
-
+    void Init_EMKeychain(void) { }
 
 Next, adjust the build settings -- switch the base SDK to 10.5…
 
@@ -76,6 +75,7 @@ Next, adjust the build settings -- switch the base SDK to 10.5…
 
 Build a release, and you'll have your wrapper.
 
+
 ### Step 2: Using it
 
 Now for the fun part.
@@ -85,6 +85,7 @@ Now for the fun part.
 
 And that's it. **If all went well, you should now be able to use EMKeychain's
 `EMGenericKeychainItem`.**
+
 
 ### Step 3: Mopping up
 
@@ -96,15 +97,14 @@ have to adjust the built executable accordingly using
 You can do that by adding a new _Run Script_ build phase to the target, which
 should contain this code.
 
-
-install_name_tool -change /usr/lib/EMKeychain.dylib \
-"@executable_path/../Resources/EMKeychain.dylib" \
-"$TARGET_BUILD_DIR/$PROJECT_NAME.app/Contents/MacOS/$PROJECT_NAME"
-
+    install_name_tool -change /usr/lib/EMKeychain.dylib \
+    "@executable_path/../Resources/EMKeychain.dylib" \
+    "$TARGET_BUILD_DIR/$PROJECT_NAME.app/Contents/MacOS/$PROJECT_NAME"
 
 It's possible that on the next build the executable will mope about a missing
 `/usr/local/lib/EMKeychain.dylib` now. Duplicate the snippet and adjust the
 second one accordingly.
+
 
 ### Step 4: Get yourself a beer
 
