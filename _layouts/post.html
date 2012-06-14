@@ -35,12 +35,12 @@
           <section class="entry-content">
             {{ content }}
 
-            {% unless page.tags.size == 0 %}
+            {% if page.tags && page.tags.size > 0 %}
               <p class="tags">
                 This post was filed under
                 {{ page.tags | tag_links }}.
               </p>
-            {% endunless %}
+            {% endif %}
 
             <p class="article-end">
               ~ FIN ~
