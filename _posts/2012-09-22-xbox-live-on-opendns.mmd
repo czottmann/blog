@@ -3,7 +3,6 @@ title: Blocking those ads on Xbox Live
 abstract: Building a fire-and-forget ad blocker using OpenDNS.
 date: 2012-09-22
 slug: 2012/09/22/xbox-live-on-opendns
-draft: true
 layout: post
 lang: en
 tags:
@@ -19,7 +18,7 @@ So, I've paid for the console, I'm paying for all my games, and I pay an ongoing
 
 I disagree.
 
-<span class="highlight">So I'm making use of [OpenDNS](http://opendns.com) to block their ad servers on my Xbox.</span>  Here's how.
+<span class="highlight">So I'm using [OpenDNS](http://opendns.com) to block their ad servers on my Xbox for good.</span>  Here's how.[^1]
 
 First up: I'm using a router, and both my Xbox and my main computer are getting their internets from it.  Since both of them go through the same router, they share the same external IP address.  If your setup is the same, this is what to do.
 
@@ -39,9 +38,10 @@ Then, you'll configure your 360 to use OpenDNS' DNS server, so it'll adhere to y
 4. Install the Updater and connect it to your OpenDNS account.  Make it auto-run on startup.
 5. On the settings page for that network, set your "Web Content Filtering" level to whatever (mine is at "None"), but add the following individual domains to the "Always block" list:  
 · `g.msn.com`  
+· `rad.msn.com`  
+· `rpt.rad.msn.com`  
 · `global.msads.net`  
-· `msnvidweb.vo.msecnd.net`  
-· `rad.msn.com`
+· `msnvidweb.vo.msecnd.net`
 
 At this point your OpenDNS account will a) always know your home network's current IP address and b) block MS' ad servers.  Your network won't be affected by this, tho, as it doesn't actively use OpenDNS.
 
@@ -59,3 +59,5 @@ That's it.  Your Xbox is now using OpenDNS' DNS servers — and its blocking cap
 If the dashboard is still showing ads, clear the 360's cache or wait a day or two for the ads to expire.
 
 Disclaimer: works for me, YMMV, I take no responsibility.  Moo.
+
+[^1]: I didn't come up with the idea myself: there's a [reddit post](http://www.reddit.com/r/gaming/comments/n5831/how_to_block_xbox_dashboard_ads/) on the topic that predates my post by about 9 months.
