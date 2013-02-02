@@ -13,7 +13,8 @@ var subline = document.getElementById("side-header-subline"),
     "You should really start to eat better.",
     "A word of warning: not everything you'll read here is utterly brilliant.",
     "Sometimes, I have memories of driving around Liberty City.  Makes me smile.",
-    "I was hooting when that Dragon capsule docked.  I love everything it stands for."
+    "I was hooting when that Dragon capsule docked.  I love everything it stands for.",
+    "\"A wise man told me don't argue with fools / Cause people from a distance can't tell who is who\"<br>— Jay-Z"
   ];
 
 subline.innerHTML = claims[ Math.floor( Math.random() * claims.length ) ];
