@@ -25,20 +25,18 @@
   font-variant-ligatures: common-ligatures additionalligatures;
 }
 
-@mixin lemonde-courrier-regular {
+@mixin excerpt-font-regular {
   // Le Monde Courrier STD Regular
   @include ligatures;
-  font-family: "lemonde-courrier-n4", "lemonde-courrier", serif;
-  font-style: normal;
+  font-family: "PT Serif", serif;
   font-weight: 400;
 }
 
-@mixin lemonde-courrier-semibold {
+@mixin excerpt-font-bold {
   // Le Monde Courrier STD Semibold
   @include ligatures;
-  font-family: "lemonde-courrier-n6", "lemonde-courrier", serif;
-  font-style: normal;
-  font-weight: 600;
+  font-family: "PT Serif", serif;
+  font-weight: 700;
 }
 
 @mixin proxima-nova {
@@ -114,7 +112,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @include lemonde-courrier-semibold;
+  @include excerpt-font-bold;
 
   a {
     border-bottom: none;
@@ -222,7 +220,7 @@ strong, b {
 
     header {
       h3.subheadline {
-        @include lemonde-courrier-regular;
+        @include excerpt-font-regular;
         color: #888;
         font-size: 20px;
         line-height: 140%;
@@ -286,7 +284,7 @@ strong, b {
     }
 
     .article-end {
-      @include lemonde-courrier-semibold;
+      @include excerpt-font-bold;
       color: #ddd;
       font-size: 32px;
       font-weight: bold;
@@ -304,14 +302,14 @@ strong, b {
 
     ul#post-list {
       li {
-        @include lemonde-courrier-regular;
+        @include excerpt-font-regular;
         font-size: 24px;
         line-height: 140%;
         margin-bottom: 25px;
 
         .subheadline {
           color: #888;
-          font-size: 16px;
+          font-size: 17px;
           line-height: 140%;
           text-shadow: none;
         }
