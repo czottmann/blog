@@ -1,0 +1,55 @@
+---
+title: "Google's authentication-less, on-the-fly image resizing service"
+abstract: "Did you know Google runs a free an open image resizing service? I certainly didn't."
+date: 2013-04-14
+layout: post
+tags:
+- code
+- google
+lang: en
+---
+
+
+While lazily poking around the Google+ HTML I found an interesting thing:
+for resizing post images on the fly, G+ uses an open API endpoint.  That's
+interesting and might come in handy at some point in the future, so jotting down some notes felt like a good idea.
+
+If you know more about this API, let me know, please!  (See the sidebar for options.)
+
+A word of warning before I progress: I've spent ~45 minutes on both my 
+experimentation and this here write-up, maybe an hour.  You've been warned.
+
+
+### Base URL
+
+`https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy`
+
+
+### Parameters:
+
+* `url`: original image URL
+* `container`: must be "focus" ([i dunno lol](http://audito.re/LRLb2Q.jpeg))
+* `refresh`: time (in seconds) to cache it on G's servers
+* `resize_w`: width in pixels
+* `resize_h`: height in pixels
+
+You can either specify both `resize_*` parameters or just one.
+
+
+### An example
+
+Let's resize [that big panorama picture I took in Istanbul last year](http://audito.re/1qYw_g.jpg).
+
+Make it square, 300x300px:
+
+    https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F7298%2Fblog%2FBlick_von_der_S%25C3%25BCleymaniye-Moschee.jpg&container=focus&resize_w=300&resize_h=300
+
+Make it 750px wide and keep the aspect ratio:
+
+    https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F7298%2Fblog%2FBlick_von_der_S%25C3%25BCleymaniye-Moschee.jpg&container=focus&resize_w=750
+
+
+### Quirks
+
+At least in Chrome, opening the URL in the browser will force a download of a `p.txt` file (which is actually a JPG).  Putting the URL in an `<img>` tag is fine, tho.  Or just use `curl` to save it locally.
+
