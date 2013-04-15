@@ -38,15 +38,23 @@ You can either specify both `resize_*` parameters or just one.
 
 ### An example
 
-Let's resize [that big panorama picture I took in Istanbul last year](http://audito.re/1qYw_g.jpg).
+Let's resize [that big 3964x1492px panorama picture I took in Istanbul last year](http://audito.re/1qYw_g.jpg).
 
-Make it square, 300x300px:
+**Make it square, 300x300px and cache it for a 30 days:**
 
-    https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F7298%2Fblog%2FBlick_von_der_S%25C3%25BCleymaniye-Moschee.jpg&container=focus&resize_w=300&resize_h=300
+![Resized image, 300x300px](https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F7298%2Fblog%2FBlick_von_der_S%25C3%25BCleymaniye-Moschee.jpg&container=focus&resize_w=300&resize_h=300&refresh=2592000)
 
-Make it 750px wide and keep the aspect ratio:
+URL:
 
-    https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F7298%2Fblog%2FBlick_von_der_S%25C3%25BCleymaniye-Moschee.jpg&container=focus&resize_w=750
+    https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F7298%2Fblog%2FBlick_von_der_S%25C3%25BCleymaniye-Moschee.jpg&container=focus&resize_w=300&resize_h=300&refresh=2592000
+
+**Make it 650px wide, keep the aspect ratio and cache the result for a year:**
+
+![Resized image, 650px wide](https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F7298%2Fblog%2FBlick_von_der_S%25C3%25BCleymaniye-Moschee.jpg&container=focus&resize_w=650&refresh=31536000)
+
+URL:
+
+    https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F7298%2Fblog%2FBlick_von_der_S%25C3%25BCleymaniye-Moschee.jpg&container=focus&resize_w=650&refresh=31536000
 
 
 ### Quirks
