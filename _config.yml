@@ -7,3 +7,8 @@ permalink: pretty
 exclude: [ Gemfile, Gemfile.lock, Rakefile.rb ]
 destination: ../jekyll-site-heroku/public
 future: true
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
